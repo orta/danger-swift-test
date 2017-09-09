@@ -1,0 +1,10 @@
+language: objective-c
+osx_image: xcode9
+
+install:
+  - npm install -g danger@alpha
+  - brew install marathon-swift --HEAD
+  - marathon install danger/danger-swift
+  
+script:
+  - danger process danger-swift
